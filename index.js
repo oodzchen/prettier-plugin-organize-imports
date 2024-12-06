@@ -64,12 +64,6 @@ const withOrganizeImportsPreprocess = (parser) => {
  */
 const plugin = {
 	options: {
-		organizeImportsSkipDestructiveCodeActions: {
-			type: 'boolean',
-			default: false,
-			category: 'OrganizeImports',
-			description: 'Skip destructive code actions like removing unused imports.',
-		},
 		organizeImportsMode: {
 			type: 'choice',
 			default: 'All',

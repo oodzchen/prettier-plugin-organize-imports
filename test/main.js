@@ -79,15 +79,6 @@ test('skips when formatting a range', async (t) => {
 	t.is(formattedCode2, code);
 });
 
-test('does not remove unused imports with `organizeImportsSkipDestructiveCodeActions` enabled', async (t) => {
-	const code = `import { foo } from "./bar";
-`;
-
-	const formattedCode = await prettify(code, { organizeImportsSkipDestructiveCodeActions: true });
-
-	t.is(formattedCode, code);
-});
-
 test('does not remove unused imports with `organizeImportsMode` set to `SortAndCombine`', async (t) => {
 	const code = `import { foo } from "./bar";
 `;

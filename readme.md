@@ -50,16 +50,6 @@ Note that automatic plugin discovery is not supported with some package managers
 
 Files containing the substring `// organize-imports-ignore` or `// tslint:disable:ordered-imports` are skipped.
 
-### Skip Destructive Code Actions
-
-If you don't want destructive code actions (like removing unused imports), you can enable the option `organizeImportsSkipDestructiveCodeActions` via your Prettier config.
-
-```json
-{
-  "organizeImportsSkipDestructiveCodeActions": true
-}
-```
-
 ### Mode
 Use `organizeImportsMode` to determine how import organization works. This is the recommended approach, as TypeScript has deprecated the [skipDestructiveCodeActions](https://github.com/microsoft/TypeScript/blob/main/src/services/types.ts#L746C5-L746C31) option.
 
@@ -68,7 +58,7 @@ Available modes include:
 - `SortAndCombine` - Only sorts and combines imports without removing any
 - `RemoveUnused` - Only removes unused imports without changing their order
 
-The default mode is `All`. For compatibility, if `organizeImportsSkipDestructiveCodeActions` is set to `true`, the mode will be forced to `SortAndCombine`.
+The default mode is `All`.
 
 ```json
 {
